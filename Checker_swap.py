@@ -420,7 +420,8 @@ class swap:
             befor = self.Attempts
             sleep(1)
             self.RS = self.Attempts - befor
-            os.system(f"title Attempt : {self.Attempts} / Error : {self.Error} / R/s : {self.RS}  ")
+            ctypes.windll.kernel32.SetConsoleTitleW(str(f"Attempt : {self.Attempts} / Error : {self.Error} / R/s : {self.RS}  "))
+            #os.system(f"title Attempt : {self.Attempts} / Error : {self.Error} / R/s : {self.RS}  ")
             #Print(False,True,"/",Design.green,f"Attempt : {self.Attempts} / Error : {self.Error} / R/s : {self.RS}",False)
             gc.collect()
 
