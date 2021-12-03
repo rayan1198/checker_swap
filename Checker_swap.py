@@ -422,3 +422,5 @@ class swap:
             os.system(f"title Attempt : {self.Attempts} / Error : {self.Error} / R/s : {self.RS}  ")
             #Print(False,True,"/",Design.green,f"Attempt : {self.Attempts} / Error : {self.Error} / R/s : {self.RS}",False)
             gc.collect()
+
+swap()
