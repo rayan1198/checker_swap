@@ -125,7 +125,8 @@ def LoadFile(name,path):
         Print(False,False,"/",Design.yellow,f"{name} Path : ",False);pa = input()
         try:
             path2 = re.search(r"'(.*?)'",pa).group(1)
-        except:path2 = re.search(r"(.*?)",pa).group(1)
+        except:
+            path2 = re.search(r'"(.*?)"',pa).group(1)
         with open(path2,"r") as myfile:
             file = myfile.read().splitlines()
         #file = [i.strip() for i in open(path2,"r") if i]
